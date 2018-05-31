@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 	entry: './styles/styles.scss',
@@ -22,23 +23,34 @@ module.exports = {
 		}
 	},
 	module: {
-		loaders: [
+		rules: [
 			{
 				test: /\.scss$/,
-				loader: [
-					'style-loader',
-					'css-loader',
-					{
-						loader: 'postcss-loader',
-						options: {
-							plugins: () => [
-								require('autoprefixer')
-							]
-						}
-					},
-					'sass-loader'
-				]
+				include: __dirname + '/styles',
+				use: ExtractTextPlugin.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								minimize: true
+							}
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								plugins: () => [
+									require('autoprefixer')
+								]
+							}
+						},
+						'sass-loader'
+					]
+				})
 			}
 		]
-	}
+	},
+	plugins: [
+		new ExtractTextPlugin('styles/styles.css')
+	]
 };
