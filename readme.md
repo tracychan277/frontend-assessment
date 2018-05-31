@@ -1,37 +1,15 @@
-Introduction
----
-Thanks for taking the time to complete this frontend technical assessment. We will be focusing on code quality (reusability, readability, maintainability, etc.) and your eye for detail. Feel free to add libraries and edit the HTML files as required. Bonus points if SASS/LESS is used. 
+# Mindarc - Frontend assessment
 
-*Estimated Time: 45m - 1h* 
+Date: 31/05/2018
 
-Exercise 1
----
-Build a responsive page based on the designs.
+## Build instructions:
 
-##### Working file
-exercise1.html
+This project runs on a webpack dev server and package dependencies are brought in through NPM.
 
-##### Designs
-* exercise1-desktop.png
-* exercise1-mobile.png
+To install all the project dependencies, run the following terminal command from within the project directory:
 
-##### Assets
-* Desktop banner - http://via.placeholder.com/1440x650
-* Mobile banner - http://via.placeholder.com/600x600
-* Content images - http://via.placeholder.com/400x300
+`npm install`
 
-Exercise 2
----
-Convert the HTML to an accordion.
+To run a live demo locally, navigate to http://localhost:3000 after running the following terminal command from within the same directory:
 
-##### Working file
-exercise2.html
-
-##### Requirements
-1. Only 1 accordion should be open at a time.
-2. Open the first accordion on load.
-3. If the open accordion is clicked, close it.
-
-###### Bonus points
-* Improve the user experience with meaningful animations/transitions.
-* Make it prettier.
+`npm start`
