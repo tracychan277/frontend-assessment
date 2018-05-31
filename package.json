@@ -1,0 +1,30 @@
+{
+  "name": "frontend-assessment",
+  "version": "1.0.0",
+  "description": "Mindarc frontend assessment",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tracychan277/frontend-assessment.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "author": "Tracy Chan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tracychan277/frontend-assessment/issues"
+  },
+  "homepage": "https://github.com/tracychan277/frontend-assessment#readme",
+  "dependencies": {
+    "webpack": "^3.12.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^8.5.2",
+    "css-loader": "^0.28.11",
+    "node-sass": "^4.9.0",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "webpack-dev-server": "^2.11.2"
+  }
+}
